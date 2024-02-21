@@ -1,0 +1,84 @@
+<html>
+<body>
+    <div class="login">
+       <h1>House price prediction</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>hHousing Estimation Form</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Longitude</label>
+            <input class="form-control" type="text" name="longitude" placeholder="Enter a value of longitude"
+                required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Latitude</label>
+            <input class="form-control" type="text" name="latitude" placeholder="Enter a value of latitude"
+                required />
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">House Median Age</label>
+            <input class="form-control" type="text" name="housing_median_age"
+                placeholder="Enter a value of housing_median_age" />
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Total Rooms</label>
+            <input class="form-control" type="text" name="total_rooms" placeholder="Enter a value of total_rooms"
+                required />
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Total Bedrooms</label>
+            <input class="form-control" type="text" name="total_bedrooms"
+                placeholder="Enter a value of total_bedrooms" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Population</label>
+            <input class="form-control" type="text" name="population" placeholder="Enter a value of population"
+                required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Households</label>
+            <input class="form-control" type="text" name="households" placeholder="Enter a value of households"
+                required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Median Income</label>
+            <input class="form-control" type="text" name="median_income"
+                placeholder="Enter a value of median_income" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ocean Proximity</label>
+            <select class="form-control" name="ocean_proximity" placeholder="Enter a value of ocean_proximity"
+                required>
+
+                <option value="<1H OCEAN">
+                    &lt;1H OCEAN
+                </option>
+                <option value="INLAND">
+                    INLAND
+                </option>
+                <option value="NEAR BAY">
+                    NEAR BAY
+                </option>
+                <option value="NEAR OCEAN">
+                    NEAR OCEAN
+                </option>
+                <option value="ISLAND">
+                    ISLAND
+                </option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict Median House Value" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>

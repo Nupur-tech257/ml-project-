@@ -1,1 +1,11 @@
-flask
+Flask
+gunicorn==19.7.1
+pandas
+numpy
+seaborn
+PyYAML 
+matplotlib
+scikit-learn
+evidently==0.2.8
+dill
+#-e .
